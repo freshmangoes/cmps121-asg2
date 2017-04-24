@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
     static final public String MYPREFS = "myprefs";
     static final public String PREF_STRING_1 = "string_1";
 
+    //Just trying some stuff
+    static final public String PREF_STRING_2 = "string_2";
+    static final public String PREF_STRING_3 = "string_3";
+
     AppInfo appInfo;
 
     @Override
