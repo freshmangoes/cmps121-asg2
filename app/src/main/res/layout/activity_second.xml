@@ -28,7 +28,9 @@
         android:layout_height="wrap_content"
         android:text="@string/string2"
         android:textSize="20sp"
-        android:layout_alignBaseline="@+id/activity2Text" />
+        android:layout_alignBaseline="@+id/editText"
+
+    />
 
     <Button
         android:id="@+id/button1"

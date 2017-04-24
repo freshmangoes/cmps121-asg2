@@ -25,16 +25,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
-        String myText = settings.getString(MainActivity.PREF_STRING_1, "");
+        String string1 = settings.getString(MainActivity.PREF_STRING_1, "");
         EditText edv = (EditText) findViewById(R.id.editText1);
-        edv.setText(myText);
+        edv.setText(string1);
+
+        SharedPreferences settings2 = getSharedPreferences(SecondActivity.MYPREFS, 0);
+        String string2 = settings.getString(SecondActivity.PREF_STRING_2, "");
+        TextView tv = (TextView)findViewById(R.id.activity2Text);
+        tv.setText(string2);
 
 
 
-//        EditText edv2 = (EditText) findViewById(R.id.editText2);
-//        if (appInfo.sharedString != null) {
-//            edv2.setText(appInfo.sharedString);
-//        }
     }
 
     public void goSecond(View V) {

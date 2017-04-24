@@ -25,9 +25,15 @@ public class SecondActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
-        String myText = settings.getString(MainActivity.PREF_STRING_1, "");
+        String enter1 = settings.getString(MainActivity.PREF_STRING_1, "");
         TextView tv = (TextView)findViewById(R.id.activity1Text);
-        tv.setText(myText);
+
+        SharedPreferences settings2 = getSharedPreferences(SecondActivity.MYPREFS, 1);
+        String enter2 = settings2.getString(SecondActivity.PREF_STRING_2, "");
+        EditText edv2 = (EditText) findViewById(R.id.editText);
+        edv2.setText(enter2);
+
+        tv.setText(enter1);
     }
 
     public void goFirst(View V) {
@@ -35,12 +41,10 @@ public class SecondActivity extends AppCompatActivity {
 
         EditText edv = (EditText)findViewById(R.id.editText);
         String text_temp = edv.getText().toString();
-        SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
+        SharedPreferences settings = getSharedPreferences(SecondActivity.MYPREFS, 1);
         SharedPreferences.Editor editor = settings.edit();
-        editor.putString(PREF_STRING_2, text_temp);
+        editor.putString(SecondActivity.PREF_STRING_2, text_temp);
         editor.commit();
-
-
 
         // Go to second activity
         Intent intent = new Intent(this, MainActivity.class);
