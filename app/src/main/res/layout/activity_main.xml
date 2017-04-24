@@ -11,19 +11,35 @@
 
     <TextView
         android:id="@+id/textView1"
+        android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/first_activity_hello" />
+        android:text="@string/title_activity_first" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string1"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/editText1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string2"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/activity2Text" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="175dp"
-        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="120dp"
         android:layout_toRightOf="@+id/textView1"
-        android:onClick="goOther"
+        android:onClick="goSecond"
+        android:layout_alignBaseline="@+id/activity2Text"
         android:text="@string/gostring" />
 
     <EditText
@@ -32,20 +48,29 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_marginLeft="30dp"
         android:layout_marginTop="41dp"
-        android:ems="10" />
+        android:layout_marginLeft="90dp"
+        android:ems="7" >
+        <requestFocus/>
+    </EditText>
 
-    <EditText
-        android:id="@+id/editText2"
+    <TextView
+        android:id="@+id/activity2Text"
+        android:text="@string/ph2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editText1"
         android:layout_below="@+id/editText1"
         android:layout_marginTop="21dp"
-        android:ems="10" >
+        />
 
-        <requestFocus />
-    </EditText>
 
+    <!--<EditText-->
+        <!--android:id="@+id/editText2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignLeft="@+id/editText1"-->
+        <!--android:layout_below="@+id/editText1"-->
+        <!--android:layout_marginTop="21dp"-->
+        <!--android:ems="7" />-->
 </RelativeLayout>

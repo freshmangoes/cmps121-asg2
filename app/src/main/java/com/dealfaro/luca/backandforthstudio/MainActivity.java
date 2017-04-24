@@ -6,16 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     static final public String MYPREFS = "myprefs";
     static final public String PREF_STRING_1 = "string_1";
-
-    //Just trying some stuff
-    static final public String PREF_STRING_2 = "string_2";
-    static final public String PREF_STRING_3 = "string_3";
-
     AppInfo appInfo;
 
     @Override
@@ -33,13 +29,15 @@ public class MainActivity extends AppCompatActivity {
         EditText edv = (EditText) findViewById(R.id.editText1);
         edv.setText(myText);
 
-        EditText edv2 = (EditText) findViewById(R.id.editText2);
-        if (appInfo.sharedString != null) {
-            edv2.setText(appInfo.sharedString);
-        }
+
+
+//        EditText edv2 = (EditText) findViewById(R.id.editText2);
+//        if (appInfo.sharedString != null) {
+//            edv2.setText(appInfo.sharedString);
+//        }
     }
 
-    public void goOther(View V) {
+    public void goSecond(View V) {
         // Grab the text, and store it in a preference.
         EditText edv = (EditText) findViewById(R.id.editText1);
         String text1 = edv.getText().toString();
@@ -49,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
 
         // The second string we store it in the singleton class.
-        EditText edv2 = (EditText) findViewById(R.id.editText2);
-        String text2 = edv2.getText().toString();
-        appInfo.setColor(text2);
+        //EditText edv2 = (EditText) findViewById(R.id.editText2);
+        //String text2 = edv2.getText().toString();
+        //appInfo.setColor(text2);
 
         // Go to second activity
         Intent intent = new Intent(this, SecondActivity.class);

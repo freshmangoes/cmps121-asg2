@@ -11,39 +11,60 @@
 
     <TextView
         android:id="@+id/textView1"
+        android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/second_activity_hello" />
+        android:text="@string/title_activity_second" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string1"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/activity1Text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string2"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/activity2Text" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="127dp"
-        android:onClick="clickBack"
-        android:text="@string/back" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="120dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:onClick="goFirst"
+        android:layout_alignBaseline="@+id/activity1Text"
+        android:text="@string/gostring"
+    />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/activity1Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ph2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginTop="41dp"
+        android:layout_marginLeft="90dp"
+    />
 
-    <TextView
-        android:id="@+id/textView3"
+
+    <EditText
+        android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="74dp"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
+        android:layout_alignLeft="@+id/activity1Text"
+        android:layout_below="@+id/activity1Text"
+        android:layout_marginTop="21dp"
+        android:ems="7">
+        <requestFocus/>
+    </EditText>
 
 </RelativeLayout>
