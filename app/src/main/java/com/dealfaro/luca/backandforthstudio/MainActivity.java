@@ -32,16 +32,8 @@ public class MainActivity extends AppCompatActivity {
         edv_string1.setText(string1);
 
         // To display string from second activity in first activity
-        //SharedPreferences settings2 = getSharedPreferences(SecondActivity.MYPREFS, 0);
-        //String string2 = settings.getString(SecondActivity.PREF_STRING_2, "");
-        //TextView tv_string2 = (TextView)findViewById(R.id.activity2Text);
-        //tv_string2.setText(string2);
         TextView tv_string2 = (TextView)findViewById(R.id.activity2Text);
         tv_string2.setText(appInfo.sharedString);
-
-
-
-
     }
 
     public void enterText(View v){
@@ -54,12 +46,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goSecond(View V) {
-
-        // The second string we store it in the singleton class.
-        //EditText edv2 = (EditText) findViewById(R.id.editText2);
-        //String text2 = edv2.getText().toString();
-        //appInfo.setColor(text2);
-
         // Go to second activity
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);

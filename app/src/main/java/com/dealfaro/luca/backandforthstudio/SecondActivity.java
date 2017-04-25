@@ -31,31 +31,13 @@ public class SecondActivity extends AppCompatActivity {
         TextView tv_string1 = (TextView)findViewById(R.id.activity1Text);
         tv_string1.setText(enter1);
 
-        //To enter in second string
-        //SharedPreferences settings2 = getSharedPreferences(SecondActivity.MYPREFS, 0);
-        //String enter2 = settings2.getString(SecondActivity.PREF_STRING_2, "");
-        //EditText edv_string2 = (EditText) findViewById(R.id.editText);
-        //edv_string2.setText(enter2);
-
         EditText edv_string2 = (EditText) findViewById(R.id.editText);
         if(appInfo.sharedString!=null){
             edv_string2.setText(appInfo.sharedString);
         }
-
-        // The second string we store it in the singleton class.
-        EditText edv2 = (EditText) findViewById(R.id.editText);
-        String string2 = edv2.getText().toString();
-        appInfo.setColor(string2);
-
     }
 
     public void enterText2(View V){
-//        EditText edv = (EditText)findViewById(R.id.editText);
-//        String text_temp = edv.getText().toString();
-//        SharedPreferences settings = getSharedPreferences(SecondActivity.MYPREFS, 1);
-//        SharedPreferences.Editor editor = settings.edit();
-//        editor.putString(SecondActivity.PREF_STRING_2, text_temp);
-//        editor.commit();
         EditText edv2 = (EditText) findViewById(R.id.editText);
         String string2 = edv2.getText().toString();
         appInfo.setColor(string2);
@@ -63,9 +45,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void goFirst(View V) {
-        // Grab the text, and store it in a preference.
-
-
         // Go to second activity
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
