@@ -28,9 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/string2"
         android:textSize="20sp"
-        android:layout_alignBaseline="@+id/editText"
-
-    />
+        android:layout_alignBaseline="@+id/editText" />
 
     <Button
         android:id="@+id/button1"
@@ -42,8 +40,16 @@
         android:layout_toRightOf="@+id/textView1"
         android:onClick="goFirst"
         android:layout_alignBaseline="@+id/activity1Text"
-        android:text="@string/gostring"
-    />
+        android:text="@string/gostring" />
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignRight="@id/button1"
+        android:onClick="enterText2" />
 
     <TextView
         android:id="@+id/activity1Text"
@@ -54,8 +60,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="41dp"
-        android:layout_marginLeft="90dp"
-    />
+        android:layout_marginLeft="90dp" />
 
 
     <EditText

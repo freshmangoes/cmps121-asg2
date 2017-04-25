@@ -24,28 +24,33 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        //To enter in string for first activity
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
         String string1 = settings.getString(MainActivity.PREF_STRING_1, "");
-        EditText edv = (EditText) findViewById(R.id.editText1);
-        edv.setText(string1);
+        EditText edv_string1 = (EditText) findViewById(R.id.editText1);
+        edv_string1.setText(string1);
 
+        // To display string from second activity in first activity
         SharedPreferences settings2 = getSharedPreferences(SecondActivity.MYPREFS, 0);
         String string2 = settings.getString(SecondActivity.PREF_STRING_2, "");
-        TextView tv = (TextView)findViewById(R.id.activity2Text);
-        tv.setText(string2);
+        TextView tv_string2 = (TextView)findViewById(R.id.activity2Text);
+        tv_string2.setText(string2);
 
 
 
     }
 
-    public void goSecond(View V) {
-        // Grab the text, and store it in a preference.
+    public void enterText(View v){
         EditText edv = (EditText) findViewById(R.id.editText1);
         String text1 = edv.getText().toString();
         SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(PREF_STRING_1, text1);
         editor.commit();
+    }
+
+    public void goSecond(View V) {
 
         // The second string we store it in the singleton class.
         //EditText edv2 = (EditText) findViewById(R.id.editText2);
@@ -59,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
