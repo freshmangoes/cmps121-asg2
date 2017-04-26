@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
         // To display string from second activity in first activity
         TextView tv_string2 = (TextView)findViewById(R.id.activity2Text);
         tv_string2.setText(appInfo.sharedString);
+
+        //To display string from third activity in first activity
+        SharedPreferences settings3 = getSharedPreferences(ThirdActivity.PREFS3,0);
+        String string3 = settings3.getString(ThirdActivity.PREF_STRING_3, "");
+        TextView tv_string3 = (TextView)findViewById(R.id.activity3Text);
+        tv_string3.setText(string3);
     }
 
     public void enterText(View v){

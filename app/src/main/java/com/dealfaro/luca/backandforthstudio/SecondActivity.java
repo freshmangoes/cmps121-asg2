@@ -27,17 +27,25 @@ public class SecondActivity extends AppCompatActivity {
 
         //To display first string in second activity
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
-        String enter1 = settings.getString(MainActivity.PREF_STRING_1, "");
+        String string1 = settings.getString(MainActivity.PREF_STRING_1, "");
         TextView tv_string1 = (TextView)findViewById(R.id.activity1Text);
-        tv_string1.setText(enter1);
+        tv_string1.setText(string1);
+        
+        //To display third string in second activity
 
+        SharedPreferences settings3 = getSharedPreferences(ThirdActivity.PREFS3,0);
+        String string3 = settings3.getString(ThirdActivity.PREF_STRING_3, "");
+        TextView tv_string3 = (TextView)findViewById(R.id.activity3Text);
+        tv_string3.setText(string3);
+        
+        //To display second string in second activity
         EditText edv_string2 = (EditText) findViewById(R.id.editText);
         if(appInfo.sharedString!=null){
             edv_string2.setText(appInfo.sharedString);
         }
     }
 
-    public void enterText2(View V){
+    public void enterText(View V){
         EditText edv2 = (EditText) findViewById(R.id.editText);
         String string2 = edv2.getText().toString();
         appInfo.setColor(string2);

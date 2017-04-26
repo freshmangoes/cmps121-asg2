@@ -39,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/string3_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_alignLeft="@+id/activity2Text"
         android:text="@string/ph2" />
 

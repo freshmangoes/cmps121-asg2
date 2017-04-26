@@ -16,10 +16,6 @@ public class AppInfo {
     }
 
     // Here are some values we want to keep global.
-    public String string1;
-    public String string2;
-    public String string3;
-
     public String sharedString;
 
     private Context my_context;

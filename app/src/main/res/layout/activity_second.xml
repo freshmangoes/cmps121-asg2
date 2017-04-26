@@ -102,6 +102,6 @@
         android:text="Enter"
         android:layout_alignBaseline="@id/editText"
         android:layout_alignRight="@id/goFirstButton"
-        android:onClick="enterText2" />
+        android:onClick="enterText" />
 
 </RelativeLayout>
