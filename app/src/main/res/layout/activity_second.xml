@@ -10,13 +10,14 @@
     tools:context="com.dealfaro.luca.backandforthstudio.SecondActivity">
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/activity2Title"
         android:textSize="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_second" />
 
     <TextView
+        android:id="@+id/string1_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/string1"
@@ -24,44 +25,23 @@
         android:layout_alignBaseline="@+id/activity1Text" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string2"
-        android:textSize="20sp"
-        android:layout_alignBaseline="@+id/editText" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="300dp"
-        android:layout_marginLeft="120dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:onClick="goFirst"
-        android:layout_alignBaseline="@+id/activity1Text"
-        android:text="@string/gostring" />
-
-    <Button
-        android:id="@+id/enter_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enter"
-        android:layout_alignBaseline="@id/editText"
-        android:layout_alignRight="@id/button1"
-        android:onClick="enterText2" />
-
-    <TextView
         android:id="@+id/activity1Text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/ph2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/activity2Title"
+        android:layout_below="@+id/activity2Title"
         android:layout_marginTop="41dp"
         android:layout_marginLeft="90dp" />
 
+    <TextView
+        android:id="@+id/string2_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string2"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/editText" />
 
     <EditText
         android:id="@+id/editText"
@@ -73,5 +53,55 @@
         android:ems="7">
         <requestFocus/>
     </EditText>
+
+    <TextView
+        android:id="@+id/string3_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string3"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="20sp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity3Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ph2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBaseline="@id/string3_label"
+        android:layout_marginLeft="90dp"/>
+
+
+    <Button
+        android:id="@+id/goFirstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="120dp"
+        android:layout_toRightOf="@+id/activity2Title"
+        android:onClick="goFirst"
+        android:layout_alignBaseline="@+id/activity1Text"
+        android:text="@string/gostring" />
+
+    <Button
+        android:id="@+id/goThirdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gostring"
+        android:layout_alignBaseline="@+id/string3_label"
+        android:layout_toRightOf="@+id/activity1Text"
+        android:layout_alignLeft="@id/enter_button"
+        android:onClick="goThird" />
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignRight="@id/goFirstButton"
+        android:onClick="enterText2" />
 
 </RelativeLayout>

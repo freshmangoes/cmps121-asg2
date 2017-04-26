@@ -7,7 +7,7 @@
     <string name="string1">String 1:</string>
     <string name="string2">String 2:</string>
     <string name="string3">String 3:</string>
-    <string name="ph2">Placeholder 2</string>
+    <string name="ph2">        </string>
     <string name="gostring">Go</string>
     <string name="enterstring">Enter</string>
     <string name="back">Back</string>

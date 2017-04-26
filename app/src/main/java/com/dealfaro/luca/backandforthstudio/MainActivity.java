@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //To enter in string for first activity
         SharedPreferences settings = getSharedPreferences(MainActivity.MYPREFS, 0);
         String string1 = settings.getString(MainActivity.PREF_STRING_1, "");
-        EditText edv_string1 = (EditText) findViewById(R.id.editText1);
+        EditText edv_string1 = (EditText) findViewById(R.id.editText);
         edv_string1.setText(string1);
 
         // To display string from second activity in first activity
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void enterText(View v){
-        EditText edv = (EditText) findViewById(R.id.editText1);
+        EditText edv = (EditText) findViewById(R.id.editText);
         String text1 = edv.getText().toString();
         SharedPreferences settings = getSharedPreferences(MYPREFS, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -48,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     public void goSecond(View V) {
         // Go to second activity
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    public void goThird(View V){
+        //Go to third activity
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
     }
 

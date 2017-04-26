@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dealfaro.luca.backandforthstudio.ThirdActivity">
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/activity3Title"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_activity_third" />
+
+    <TextView
+        android:id="@+id/string1_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string1"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/activity1Text" />
+
+    <TextView
+        android:id="@+id/activity1Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ph2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/activity3Title"
+        android:layout_below="@+id/activity3Title"
+        android:layout_marginTop="41dp"
+        android:layout_marginLeft="90dp" />
+
+    <TextView
+        android:id="@+id/string2_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string2"
+        android:textSize="20sp"
+        android:layout_marginTop="40sp"
+        android:layout_below="@+id/string1_label" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/activity1Text"
+        android:layout_below="@+id/activity2Text"
+        android:layout_alignBaseline="@id/string3_label"
+        android:layout_marginTop="40dp"
+        android:ems="7">
+        <requestFocus/>
+    </EditText>
+
+    <TextView
+        android:id="@+id/string3_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string3"
+        android:layout_below="@+id/string2_label"
+        android:layout_marginTop="40sp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity2Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ph2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBaseline="@id/string2_label"
+        android:layout_marginLeft="90dp"/>
+
+
+    <Button
+        android:id="@+id/goFirstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="300dp"
+        android:layout_marginLeft="120dp"
+        android:layout_toRightOf="@+id/activity3Title"
+        android:onClick="goFirst"
+        android:layout_alignBaseline="@+id/activity1Text"
+        android:text="@string/gostring" />
+
+    <Button
+        android:id="@+id/goSecondButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gostring"
+        android:layout_alignBaseline="@+id/string2_label"
+        android:layout_toRightOf="@+id/activity1Text"
+        android:layout_alignLeft="@id/goFirstButton"
+        android:onClick="goSecond" />
+
+    <Button
+        android:id="@+id/enter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_alignBaseline="@id/editText"
+        android:layout_alignLeft="@+id/goFirstButton"
+        android:onClick="enterText" />
+
+</RelativeLayout>

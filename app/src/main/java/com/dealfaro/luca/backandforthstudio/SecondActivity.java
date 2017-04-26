@@ -50,6 +50,12 @@ public class SecondActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goThird(View V){
+        //Go to third activity
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
