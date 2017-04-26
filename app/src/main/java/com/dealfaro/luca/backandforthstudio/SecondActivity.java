@@ -30,19 +30,19 @@ public class SecondActivity extends AppCompatActivity {
         String string1 = settings.getString(MainActivity.PREF_STRING_1, "");
         TextView tv_string1 = (TextView)findViewById(R.id.activity1Text);
         tv_string1.setText(string1);
-        
-        //To display third string in second activity
 
-        SharedPreferences settings3 = getSharedPreferences(ThirdActivity.PREFS3,0);
-        String string3 = settings3.getString(ThirdActivity.PREF_STRING_3, "");
-        TextView tv_string3 = (TextView)findViewById(R.id.activity3Text);
-        tv_string3.setText(string3);
-        
+
         //To display second string in second activity
         EditText edv_string2 = (EditText) findViewById(R.id.editText);
         if(appInfo.sharedString!=null){
             edv_string2.setText(appInfo.sharedString);
         }
+
+        //To display third string in second activity
+        SharedPreferences settings3 = getSharedPreferences(ThirdActivity.PREFS3,0);
+        String string3 = settings3.getString(ThirdActivity.PREF_STRING_3, "");
+        TextView tv_string3 = (TextView)findViewById(R.id.activity3Text);
+        tv_string3.setText(string3);
     }
 
     public void enterText(View V){
